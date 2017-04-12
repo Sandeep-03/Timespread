@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class SixthActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,6 +38,7 @@ public class SixthActivity extends AppCompatActivity
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         Login l = new Login();
+
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         final Adapter adapter = new Adapter
@@ -72,6 +74,27 @@ public class SixthActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
+        View hView =  navigationView.getHeaderView(0);
+        TextView v = (TextView)hView.findViewById(R.id.viewprofile);
+        TextView textView = (TextView)hView.findViewById(R.id.textview);
+        TextView textView1 = (TextView)hView.findViewById(R.id.textview1);
+        TextView textView2 = (TextView)hView.findViewById(R.id.textview2);
+        textView1.setText(Login.u.getFullName());
+        textView.setText(l.badge(Login.u.getFullName()));
+
+        assert v !=null;
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                startActivity(new Intent(SixthActivity.this, ProfileActivity.class));
+
+
+            }
+
+
+
+        });
     }
 
     @Override
@@ -112,15 +135,15 @@ public class SixthActivity extends AppCompatActivity
         } else if (id == R.id.home_N) {
             startActivity(new Intent(SixthActivity.this, FifthActivity.class));
         } else if (id == R.id.daily_N) {
-
+            startActivity(new Intent(SixthActivity.this, DailyActivity.class));
         } else if (id == R.id.bus_N) {
             startActivity(new Intent(SixthActivity.this, BusActivity.class));
         } else if (id == R.id.class_N) {
-
+            startActivity(new Intent(SixthActivity.this,ClassSchActivity.class));
         } else if (id == R.id.placement_N) {
-
+            startActivity(new Intent(SixthActivity.this,PlacementActivity.class));
         } else if (id == R.id.events_N) {
-
+            startActivity(new Intent(SixthActivity.this,EventsActivity.class));
         }else if (id == R.id.logout) {
             Intent i=new Intent(SixthActivity.this, FirstActivity.class);
             startActivity(i);

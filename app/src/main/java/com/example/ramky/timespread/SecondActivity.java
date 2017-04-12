@@ -31,18 +31,16 @@ public class SecondActivity extends AppCompatActivity {
         final EditText et1 = (EditText) findViewById(R.id.et1);
         Button button1 = (Button) findViewById(R.id.button1);
 
-        // to send data from one activity other
-        Intent i = new Intent(this,FourthActivity.class);
-        i.putExtra("rollno",et1.getText());
 
 
         assert button1 != null;
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // to send data from one activity other
                 Login a = new Login();
                 String rollno = et1.getText().toString();
+                Login.ro = rollno;
                 JSONObject j =new JSONObject();
                 String json;
                 try {

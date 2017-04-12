@@ -58,9 +58,9 @@ public class EighthActivity extends AppCompatActivity {
                 Login l = new Login();
                 String username = et1.getText().toString();
                 String password = et2.getText().toString();
-                if (l.checklogin(username,password).equals("true")) {
+                if (!(l.checkroll(username).equals("{response : true}"))) {
                     // Not null and OK, launch the activity
-
+                    l.getuserdata(username);
                     startActivity(new Intent(EighthActivity.this, FifthActivity.class));
 
                 } else {

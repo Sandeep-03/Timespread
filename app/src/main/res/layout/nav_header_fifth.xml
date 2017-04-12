@@ -17,7 +17,8 @@
         android:layout_height="80dp"
         android:background="@drawable/circle1"
         android:id="@+id/textview"
-        android:text="VK"
+        android:text="vk"
+        android:textAllCaps="true"
         android:textColor="@color/white"
         android:gravity="center"
         android:textStyle="bold"
@@ -40,7 +41,7 @@
          />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textview2"
         android:layout_width="wrap_content"
         android:textColor="@color/colorPrimary"
         android:layout_height="wrap_content"
@@ -53,14 +54,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textview3"
+        android:id="@+id/viewprofile"
         android:layout_toEndOf="@+id/textview"
         android:text="View Profile"
+        android:onClick="View Profile"
+        android:singleLine="true"
         android:clickable="true"
         android:fontFamily="roboto-bold"
         android:textColor="@color/blue"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textview2"
+        android:layout_alignStart="@+id/textview2"
         android:layout_alignEnd="@+id/textview1" />
 
 

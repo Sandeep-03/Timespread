@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ramky.timespread.SixthActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/MyTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="4dp">
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/textViewB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view1"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="5dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:fontFamily="exo2extra light"
+                android:textColor="@color/colorPrimary"
+                android:text="Macro Economics for Managers"
+
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/textViewB_2"
+                android:text="1:00-2:00PM"
+                android:layout_toRightOf="@+id/view1"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:fontFamily="roboto light"
+                android:layout_marginTop="80dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewB_T"
+                android:text="Class"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:fontFamily="roboto medium"
+                android:paddingRight="5dp"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_marginLeft="30dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="2dp"
+        android:layout_toRightOf="@+id/card_view1"
+        card_view:cardElevation="4dp"
+        android:paddingTop="5dp"
+        android:layout_marginTop="70dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/textViewS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:fontFamily="exo2 extra light"
+                android:textColor="@color/colorPrimary"
+                android:text="Software engineering Batch-B"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:id="@+id/textViewS_2"
+                android:text="2:00-3:00PM"
+                android:layout_toRightOf="@+id/view2"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:fontFamily="roboto light"
+                android:layout_marginTop="80dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewS_3"
+                android:text="Class"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:paddingRight="5dp"
+                android:fontFamily="roboto medium"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view3"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:paddingTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/textViewp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Principals of Programming Languages"
+                android:fontFamily="exo2 extra light"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:id="@+id/textViewp2"
+                android:text="4:00-5:00PM"
+                android:layout_toRightOf="@+id/view3"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:fontFamily="roboto light"
+                android:layout_marginTop="80dp"
+                />
+            <TextView
+                android:id="@+id/textViewS_T"
+                android:text="Class"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:paddingRight="5dp"
+                android:fontFamily="roboto medium"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view4"
+        android:layout_marginLeft="30dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="2dp"
+        android:layout_toRightOf="@+id/card_view1"
+        card_view:cardElevation="4dp"
+        android:paddingTop="5dp"
+        android:layout_marginTop="200dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                />
+
+            <TextView
+                android:id="@+id/textViewm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view5"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:fontFamily="exo2 extra light"
+                android:textColor="@color/colorPrimary"
+                android:text="Snacks"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/textViewm_2"
+                android:text="5:15-6:15PM"
+                android:layout_toRightOf="@+id/view5"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:fontFamily="roboto light"
+                android:layout_marginTop="40dp"
+                />
+            <TextView
+                android:id="@+id/textViewm_4"
+                android:text="Mess A"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_toRightOf="@+id/view5"
+                android:fontFamily="roboto extra light"
+                android:layout_marginTop="60dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewm_3"
+                android:text="Mess"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:paddingRight="5dp"
+                android:fontFamily="roboto medium"
+                android:textColor="@color/orange"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view5"
+        android:layout_gravity="center"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:paddingTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="330dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/textViewd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Directi Placement Test"
+                android:fontFamily="exo2 extra light"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:id="@+id/textViewd2"
+                android:text="4:00-5:00PM"
+                android:layout_toRightOf="@+id/view4"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:fontFamily="roboto light"
+                android:layout_marginTop="40dp"
+                />
+            <TextView
+                android:id="@+id/textViewd_T"
+                android:text="Placement"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:paddingRight="5dp"
+                android:fontFamily="roboto medium"
+                android:textColor="@color/blue"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view6"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:paddingTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="460dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                />
+
+            <TextView
+                android:id="@+id/textViewe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Art Attack"
+                android:fontFamily="exo2 extra light"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:id="@+id/textViewe2"
+                android:text="7:00PM"
+                android:layout_toRightOf="@+id/view6"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:fontFamily="roboto light"
+                android:layout_marginTop="40dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewe_T"
+                android:text="Events"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:paddingRight="5dp"
+                android:fontFamily="roboto medium"
+                android:textColor="@color/green"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -14,6 +14,10 @@ public class NinthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ninth);
+        String data1 = getIntent().getExtras().getString("data");
+        System.out.println(data1);
+        Login a = new Login();
+        a.register(data1);
 
         new Handler().postDelayed(new Runnable(){
             @Override

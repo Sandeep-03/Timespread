@@ -35,6 +35,34 @@
         <activity
             android:name=".BusActivity"
             android:label="Bus Schedule"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ClassSchActivity"
+            android:label="Class Schedule"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PlacementActivity"
+            android:label="Placement Drive"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ClubsActivity"
+            android:label="Choose Clubs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ClubsActivity_1"
+            android:label="Choose Clubs"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".SubjectsActivity_1"
+            android:label="Choose Subjects"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".EventsActivity"
+            android:label="Events"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".DailyActivity"
+            android:label="Daily Schedule"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

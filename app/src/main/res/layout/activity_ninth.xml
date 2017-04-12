@@ -51,10 +51,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:text="Looking For Aliens"
-        android:fontFamily="roboto-bold"
+        android:fontFamily="sans-serif-light"
 
         android:textColor="@color/colorPrimary"
-        android:textSize="23dp"
+        android:textSize="19dp"
         />
     <TextView
         android:id="@+id/tv4"
@@ -64,10 +64,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Trying To Connect"
-        android:fontFamily="roboto-bold"
+        android:fontFamily="sans-serif-light"
 
         android:textColor="@color/colorPrimary"
-        android:textSize="23dp"
+        android:textSize="19dp"
         />
     <TextView
         android:id="@+id/tv5"
@@ -75,12 +75,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv4"
         android:layout_centerHorizontal="true"
-        android:fontFamily="roboto-bold"
+        android:fontFamily="sans-serif-light"
 
         android:layout_marginTop="20dp"
         android:text="Connection Established"
         android:textColor="@color/colorPrimary"
-        android:textSize="23dp"
+        android:textSize="19dp"
         />
     <View
         android:id="@+id/v1"

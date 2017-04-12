@@ -153,6 +153,7 @@
         android:textSize="12dp"
         android:layout_centerHorizontal="true"
         android:text="Terms &amp; Conditions"
+
         android:clickable="true"
         android:textStyle="bold"
         />

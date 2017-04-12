@@ -38,8 +38,9 @@ public class ThirdActivity extends AppCompatActivity {
                 try {
                     String name = et1.getText().toString();
                     JSONObject jsonObj = new JSONObject(data1);
-                    jsonObj.put("name",name);
-                     data = jsonObj.toString();
+                    jsonObj.put("fullName",name);
+                    data = jsonObj.toString();
+                    System.out.println(data);
                 }
 
                 catch (JSONException e) {

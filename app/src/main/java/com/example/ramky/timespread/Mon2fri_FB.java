@@ -33,24 +33,17 @@ public class Mon2fri_FB extends Fragment {
 
          List<timetable_b> busses;
 
+        Login l = new Login();
+         int i;
+         Bustimetable b1 = l.getB();
+
         busses = new ArrayList<>();
 
-        busses.add(new timetable_b("Ajmeri Gate -> LNMIIT", "7:00 AM", "College Bus"));
-        busses.add(new timetable_b("Ajmeri Gate -> LNMIIT", "8:00 AM", "College Bus"));
-        busses.add(new timetable_b("Ajmeri Gate -> LNMIIT", "8:00 AM", "Govt Bus"));
-        busses.add(new timetable_b("LNMIIT -> Chomu Puliya", "9:15 AM", "Govt Bus"));
-        busses.add(new timetable_b("LNMIIT -> Pink Square", "11:00 AM", "College Bus"));
-        busses.add(new timetable_b("Ajmeri Gate -> LNMIIT", "12:00 PM", "Govt Bus"));
-        busses.add(new timetable_b("Pink Square -> LNMIIT", "1:30 PM", "College Bus"));
-        busses.add(new timetable_b("LNMIIT -> Pink Square", "3:05 PM", "College Bus"));
-        busses.add(new timetable_b("Ajmeri Gate -> LNMIIT", "4:00 PM", "Govt Bus"));
-        busses.add(new timetable_b("Pink Square -> LNMIIT", "5:30 PM", "College Bus"));
-        busses.add(new timetable_b("LNMIIT -> Chomu Puliya", "5:30 PM", "Govt Bus"));
-        busses.add(new timetable_b("LNMIIT -> Ajmeri Gate", "7:00 PM", "College Bus"));
-        busses.add(new timetable_b("Ajmeri Gate -> LNMIIT", "8:30 pM", "College Bus"));
-        busses.add(new timetable_b("Ajmeri Gate -> LNMIIT", "9:30 pM", "College Bus"));
+        for(i=0;i<b1.getScheduleData().get(0).getTimings().size();i++) {
 
+            busses.add(new timetable_b(b1.getScheduleData().get(0).getTimings().get(i).getOrigin()+"->"+b1.getScheduleData().get(0).getTimings().get(i).getDestination(), b1.getScheduleData().get(0).getTimings().get(i).getTime(), b1.getScheduleData().get(0).getTimings().get(i).getBusType()));
 
+        }
 
 
         BusAdapter adapter = new BusAdapter(busses);

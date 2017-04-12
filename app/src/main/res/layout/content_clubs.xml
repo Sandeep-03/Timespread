@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ramky.timespread.FifthActivity"
+    tools:showIn="@layout/activity_clubs">
+
+
+
+    <Button
+        android:id="@+id/daily_C"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="48dp"
+        android:fontFamily="roboto-regular"
+        android:paddingTop="20dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_astronomy"
+        android:text="Astronomy" />
+
+    <Button
+        android:id="@+id/class_C"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:paddingTop="20dp"
+        android:fontFamily="roboto-regular"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@+id/daily_C"
+        android:layout_marginLeft="20dp"
+        android:drawableTop="@drawable/ic_art"
+        android:background="@color/white"
+        android:text="Art" />
+
+    <Button
+        android:id="@+id/events_C"
+        android:layout_width="120dp"
+        android:fontFamily="roboto-regular"
+        android:layout_height="120dp"
+        android:layout_below="@+id/daily_C"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="48dp"
+        android:paddingTop="15dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_ballet"
+        android:text="Dance" />
+
+    <Button
+        android:id="@+id/mess_C"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/class_C"
+        android:fontFamily="roboto-regular"
+        android:layout_toRightOf="@+id/events_C"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="20dp"
+        android:drawableTop="@drawable/ic_camera"
+        android:background="@color/white"
+        android:text="Photography" />
+
+    <Button
+        android:id="@+id/bus_C"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/events_C"
+        android:fontFamily="roboto-regular"
+        android:layout_marginLeft="48dp"
+        android:paddingTop="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_code"
+        android:text="Cybros" />
+    <Button
+        android:id="@+id/placement_C"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:fontFamily="roboto-regular"
+        android:layout_below="@+id/mess_C"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/bus_C"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="20dp"
+        android:background="@color/white"
+        android:drawableTop="@drawable/ic_theatre"
+        android:text="Drama" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        card_view:cardCornerRadius="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        card_view:cardElevation="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clubs Selected 0"
+                android:paddingLeft="5dp"
+                android:textSize="20dp"
+                android:fontFamily="roboto-medium"
+                android:layout_centerVertical="true"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="5dp"/>
+            <Button
+                android:id="@+id/done"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Done"
+                android:fontFamily="roboto - bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/blue"
+                android:background="@drawable/shape_white"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

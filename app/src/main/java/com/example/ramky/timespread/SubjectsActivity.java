@@ -49,11 +49,15 @@ public class SubjectsActivity extends AppCompatActivity {
 
         final TextView sub = (TextView) findViewById(R.id.sub);
         listview = (ListView)findViewById(R.id.listView);
+        Login a = new Login();
+        a.getuserdata(Login.ro);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (SubjectsActivity.this,
                         android.R.layout.simple_list_item_multiple_choice,
                         android.R.id.text1, ListViewItems );
+
+
 
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(new OnItemClickListener()
@@ -73,6 +77,7 @@ public class SubjectsActivity extends AppCompatActivity {
                     if (sparseBooleanArray.valueAt(i)) {
 
                         ValueHolder += ListViewItems [ sparseBooleanArray.keyAt(i) ] + ",";
+                        System.out.print(ValueHolder);
                     }
 
                     i++ ;
@@ -89,7 +94,9 @@ public class SubjectsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    startActivity(new Intent(SubjectsActivity.this, FifthActivity.class));
+                     Login l = new Login();
+                      //l.addcourses();
+                    startActivity(new Intent(SubjectsActivity.this, ClubsActivity.class));
                 }
 
 

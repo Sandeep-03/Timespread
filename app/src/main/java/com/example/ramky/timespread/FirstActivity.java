@@ -5,11 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,17 +31,31 @@ public class FirstActivity extends AppCompatActivity {
         ImageView imv = (ImageView) findViewById(R.id.imv);
         TextView tv1 = (TextView) findViewById(R.id.tv1);
         TextView tv2 = (TextView) findViewById(R.id.tv2);
-        //if(network()) {
+        if (android.os.Build.VERSION.SDK_INT > 9)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+        if(network()) {
+        }
+        else
+            Toast.makeText(FirstActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
 
             assert button2 != null;
             button2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                   // if (network()) {
+                    Login l = new Login();
+                    l.getcoursedata();
+                    l.getbusdata();
+                    l.getplacementdata();
+                    l.getmessdata();
+                    //l.getuserdata("14ucs138");
+                    if (network()) {
                         startActivity(new Intent(FirstActivity.this, SecondActivity.class));
-                    //} else
-                       // Toast.makeText(FirstActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+                    } else
+                        Toast.makeText(FirstActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
                 }
             });
 
@@ -47,15 +63,21 @@ public class FirstActivity extends AppCompatActivity {
             button1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    Login l = new Login();
+                    l.getcoursedata();
+                    l.getbusdata();
+                    l.getplacementdata();
+                    l.getmessdata();
+                    //l.getuserdata("14ucs138");
+
                     if (network()) {
                         startActivity(new Intent(FirstActivity.this, EighthActivity.class));
                     } else
                         Toast.makeText(FirstActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
                 }
             });
-       // }
-       // else
-           // Toast.makeText(FirstActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+
 
     }
 

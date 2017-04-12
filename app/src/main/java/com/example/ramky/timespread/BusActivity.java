@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,9 +34,10 @@ public class BusActivity extends AppCompatActivity
 
         Login l = new Login();
 
+
         final TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Mon-Fri"));
-        tabLayout.addTab(tabLayout.newTab().setText("Weekends and Holidays"));
+        tabLayout.addTab(tabLayout.newTab().setText("Mon-Sat"));
+        tabLayout.addTab(tabLayout.newTab().setText("Sundays and Holidays"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -75,6 +77,28 @@ public class BusActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
+        View hView =  navigationView.getHeaderView(0);
+        TextView v = (TextView)hView.findViewById(R.id.viewprofile);
+
+        TextView textView = (TextView)hView.findViewById(R.id.textview);
+        TextView textView1 = (TextView)hView.findViewById(R.id.textview1);
+        TextView textView2 = (TextView)hView.findViewById(R.id.textview2);
+        textView1.setText(Login.u.getFullName());
+        textView.setText(l.badge(Login.u.getFullName()));
+
+        assert v !=null;
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                startActivity(new Intent(BusActivity.this, ProfileActivity.class));
+
+
+            }
+
+
+
+        });
     }
 
     @Override
@@ -120,15 +144,15 @@ public class BusActivity extends AppCompatActivity
         } else if (id == R.id.home_N) {
             startActivity(new Intent(BusActivity.this, FifthActivity.class));
         } else if (id == R.id.daily_N) {
-
+            startActivity(new Intent(BusActivity.this, DailyActivity.class));
         } else if (id == R.id.bus_N) {
             startActivity(new Intent(BusActivity.this, BusActivity.class));
         } else if (id == R.id.class_N) {
-
+            startActivity(new Intent(BusActivity.this,ClassSchActivity.class));
         } else if (id == R.id.placement_N) {
-
+            startActivity(new Intent(BusActivity.this, PlacementActivity.class));
         } else if (id == R.id.events_N) {
-
+            startActivity(new Intent(BusActivity.this, EventsActivity.class));
         }else if (id == R.id.logout) {
             Intent i=new Intent(BusActivity.this, FirstActivity.class);
             startActivity(i);
